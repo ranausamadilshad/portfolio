@@ -1,38 +1,296 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+:root{
+  --primary-white:#fff;
+  --primary-orange:#f9ab00;
+  --primary-dark:rgba(255,255,255,0);
+  --primary-red:#ef4035;
+  --primary-hover-red:#f33501;
+}
+/* Body */
+body{
+  font-family: 'Roboto Condensed' sans-serif;
+}
+
+
+/* Navbar */
+.logo{
+  width:60px;
+  height: 40px;
+}
+/* Menu Links */
+nav a.nav-link{
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+nav ul li{
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  margin-right: 0.15rem;
+  margin-left: 0.15rem;
+  color: var(--primary-white) !important;
+  border-top: 3px solid var(--primary-dark);
+}
+.navbar-nav > li > a.active,.navbar-nav > li > a.active:focus{
+border-top: 3px solid var(--primary-orange);
+}
+
+.navbar-nav > li > a:hover{
+  border-top: 3px solid var(--primary-orange);
+}
+
+
+/* Header */
+
+.header-wraper{
+position: relative;
+background: url(E:\ReactJS\Bootstrap\portfolio\src\images\headerr.jpg) no-repeat;
+background-size: cover;
+background-position:center ;
+height: 90vh;
+}
+.main-info{
+display: flex;
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family:'Roboto Condensed' sans-serif ;
+}
+.main-info h1{
+  color: var(--primary-orange);
+  text-transform: uppercase;
+
+}
+
+@media (max-width:728px){
+  .main-info h1{
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Typed */
+.typed-text{
+  font-size: 1.7rem;
+  color:var(--primary-white);
+}
+@media (max-width:728px){
+  .typed-text{
+    font-size: 1.3rem !important;
+  }
+}
+/* Header Main offer Button */
+.btn-main-offer{
+border:1px solid var(--primary-red);
+text-transform: uppercase;
+border-radius: 0;
+padding: 0.625rem 0.75rem 0.75rem  0.75rem;
+color:var(--primary-white);
+margin :2rem;
+}
+
+/* Services */
+.services {
+  background: #1f2235;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.common {
+  width: 33.33333333333333%;
+  margin: 20px auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ff4a57;
+  font-size: 16px;
+}
+.mainHeader {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.mainContent {
+  font-size: 16px;
+  color: #dfdfdf;
+}
+.commonBorder {
+  background: #ff4a57;
+  height: 3px;
+  width: 100px;
+  margin: 30px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.services__box {
+  padding: 40px;
+  background: #23263a;
+  color: #fff;
+  margin: 20px;
+  transition: all 0.5s linear;
+}
+.services__box:hover {
+  background: #ff4a57;
+}
+.commonIcons {
+  font-size: 40px;
+  color: #ff4a57;
+  margin-bottom: 15px;
+}
+.services__box:hover .commonIcons {
+  color: #fff;
+}
+.services__box-header {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services__box-p {
+  font-size: 14px;
+  color: #dfdfdf;
+}
+.about {
+  width: 100%;
+  background: #23263a;
+  padding: 100px 0;
+}
+.about__img {
+  padding: 30px;
+}
+.about__img img {
+  width: 300px;
+  height: 400px;
+}
+.about__info {
+  color: #fff;
+}
+.about__info h1 {
+  margin-bottom: 30px;
+}
+.about__info-p1 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.about__info-p2 {
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.info__contacts {
+  margin-top: 20px;
+}
+.info__contacts strong {
+  color: #ff4a57;
+}
+.info__contacts p {
+  margin-top: 3px;
+}
+.info__contacts .col-6 {
+  margin: 10px 0;
+}
+/* Prices */
+.prices {
+  width: 100%;
+  padding: 100px 0;
+  background: #252735;
+}
+.price {
+  background: #252735;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 35px 20px;
+  color: #fff;
+  text-align: center;
+}
+.priceHeading {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.price__rs {
+  font-size: 70px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+.price__rs span {
+  font-size: 25px;
+}
+.price ul {
+  list-style-type: none;
+}
+.price ul li {
+  margin: 5px 0;
+  border-bottom: 1px solid #3c3c3c;
+  font-size: 14px;
+  padding: 15px 0;
+}
+.price__btn {
+  margin-top: 40px;
+}
+
+
+/* Contact */
+.contact {
+  padding: 100px 0;
+  background: #23263a;
+}
+.contactSection-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contactSection-logo img {
+  margin: 0 auto;
+  width: 130px;
+}
+.contactSection p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.contactCircles {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  list-style: none;
+  justify-content: center;
+}
+.contactCircles li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  background: #1f2235;
+  margin: 0 10px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.contactCircles li:hover {
+  background: #ff4a57;
+}
+/* Form */
+.contact-div{
+  background: #2b3263;
+}
+.marginn{
+  margin-bottom: 35px;
+}
+.margint{
+  padding-top: 55px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.colorr{
+  color: #dfdfdf;
 }
